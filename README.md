@@ -1,4 +1,4 @@
-# jiggle-circle
+# jiggly-circle
 
 Enough said.
 
