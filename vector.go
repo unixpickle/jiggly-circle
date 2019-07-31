@@ -11,12 +11,9 @@ type Vector2 struct {
 }
 
 func RandomCircleVector2() Vector2 {
-	for {
-		v := Vector2{X: rand.Float64()*2 - 1, Y: rand.Float64()*2 - 1}
-		if v.Norm() <= 1 {
-			return v
-		}
-	}
+	radius := math.Sqrt(rand.Float64())
+	theta := rand.Float64() * math.Pi * 2
+	return Vector2{X: math.Cos(theta) * radius, Y: math.Sin(theta) * radius}
 }
 
 func (v Vector2) Scale(s float64) Vector2 {
